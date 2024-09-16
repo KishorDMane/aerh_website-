@@ -1,0 +1,64 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /cgi-bin/
+
+# Allow Google Images to crawl images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Allow Adsbot to crawl for Google Ads
+User-agent: AdsBot-Google
+Allow: /
+
+# Allow Google to crawl JavaScript and CSS
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+
+# Specific rules for Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Allow major search engines to crawl everything
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Slurp
+User-agent: DuckDuckBot
+Allow: /
+
+# Block certain directories from social media crawlers
+User-agent: Twitterbot
+Disallow: /internal/
+User-agent: facebookexternalhit
+Disallow: /internal/
+
+# Prevent crawling of non-public pages
+Disallow: /search?
+Disallow: /*?q=*
+Disallow: /print/
+Disallow: /login
+Disallow: /signup
+Disallow: /account
+
+# Allow crawling of important SEO pages
+Allow: /about
+Allow: /services
+Allow: /blog
+Allow: /contact
+
+# Disallow crawling of certain file types
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.xls$
+
+# Sitemap locations
+Sitemap: https://www.aerh.in/sitemap.xml
+Sitemap: https://www.aerh.in/image-sitemap.xml
+Sitemap: https://www.aerh.in/video-sitemap.xml
+
+# Crawl-delay for all bots (use cautiously, can impact crawl budget)
+# Crawl-delay: 5
+Disallow: /print/
